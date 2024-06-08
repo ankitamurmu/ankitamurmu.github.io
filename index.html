@@ -38,8 +38,13 @@
             padding: 10px 20px;
             margin: 0 5px;
             transition: background-color 0.3s;
+            cursor: pointer;
         }
         nav.navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        nav.navbar a.active {
             background-color: #575757;
             border-radius: 5px;
         }
@@ -47,15 +52,13 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-        section {
-            margin: 40px 0;
             text-align: left;
         }
-        section h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+        .tab-content {
+            display: none; /* Hide all tab content by default */
+        }
+        .tab-content.active {
+            display: block; /* Show the active tab content */
         }
         footer {
             text-align: center;
@@ -81,43 +84,43 @@
     </header>
 
     <nav class="navbar">
-        <a href="#Introduction">Introduction</a>
-        <a href="#Research-Interests">Research Interests</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Awards">Awards</a>
-        <a href="#Other-Activities">Other Activities</a>
-        <a href="#Contact">Contact</a>
+        <a href="#Introduction" class="tab-link active" onclick="showTab(event, 'Introduction')">Introduction</a>
+        <a href="#Research-Interests" class="tab-link" onclick="showTab(event, 'Research-Interests')">Research Interests</a>
+        <a href="#Projects" class="tab-link" onclick="showTab(event, 'Projects')">Projects</a>
+        <a href="#Awards" class="tab-link" onclick="showTab(event, 'Awards')">Awards</a>
+        <a href="#Other-Activities" class="tab-link" onclick="showTab(event, 'Other-Activities')">Other Activities</a>
+        <a href="#Contact" class="tab-link" onclick="showTab(event, 'Contact')">Contact</a>
     </nav>
 
     <main>
-        <section id="Introduction">
+        <section id="Introduction" class="tab-content active">
             <h2>Introduction</h2>
-            <p>Brief introduction about yourself.</p>
+            <p>This is the introduction section. Fill in details about yourself here.</p>
         </section>
 
-        <section id="Research-Interests">
+        <section id="Research-Interests" class="tab-content">
             <h2>Research Interests</h2>
-            <p>Details about your research interests.</p>
+            <p>This is the research interests section. Describe your research interests here.</p>
         </section>
 
-        <section id="Projects">
+        <section id="Projects" class="tab-content">
             <h2>Projects</h2>
-            <p>Information about your projects.</p>
+            <p>This is the projects section. Provide details about your projects here.</p>
         </section>
 
-        <section id="Awards">
+        <section id="Awards" class="tab-content">
             <h2>Awards</h2>
-            <p>Details of the awards you have received.</p>
-        </section>
-		
-        <section id="Other-Activities">
-            <h2>Other Activities</h2>
-            <p>Information about other activities.</p>
+            <p>This is the awards section. List your awards here.</p>
         </section>
 
-        <section id="Contact">
+        <section id="Other-Activities" class="tab-content">
+            <h2>Other Activities</h2>
+            <p>This is the other activities section. Include information about other activities here.</p>
+        </section>
+
+        <section id="Contact" class="tab-content">
             <h2>Contact</h2>
-            <p>Details for contacting you.</p>
+            <p>This is the contact section. Provide your contact details here.</p>
         </section>
     </main>
 
@@ -131,5 +134,21 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        function showTab(event, tabName) {
+            // Get all elements with class="tab-content" and hide them
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Get all elements with class="tab-link" and remove the class "active"
+            var tabLinks = document.querySelectorAll('.tab-link');
+            tabLinks.forEach(link => link.classList.remove('active'));
+            
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
