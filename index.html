@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Profile</title>
+    <title>My Profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-			text-align: center;
+            text-align: center;
             background: #f4f4f9;
             color: #333;
         }
         header {
-		    text-align: center;
+            text-align: center;
             margin: 20px 0;
         }
         header img {
@@ -24,23 +24,40 @@
             margin: 10px 0 20px;
             font-size: 24px;
         }
-		
-		 main {
+        nav.navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        nav.navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        nav.navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        main {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
-		
         section {
             margin: 40px 0;
+            text-align: left;
         }
         section h2 {
             font-size: 20px;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
-        
-		footer {
+        footer {
             text-align: center;
             margin: 40px 0;
         }
@@ -55,7 +72,6 @@
         .social-media img:hover {
             transform: scale(1.1);
         }
-		
     </style>
 </head>
 <body>
@@ -64,39 +80,56 @@
         <h1>Welcome to My Profile :))</h1>
     </header>
 
-    <section id="Introduction">
-        <h2>Introduction</h2>
-        <p>Brief introduction about yourself.</p>
-    </section>
+    <nav class="navbar">
+        <a href="#Introduction">Introduction</a>
+        <a href="#Research-Interests">Research Interests</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Awards">Awards</a>
+        <a href="#Other-Activities">Other Activities</a>
+        <a href="#Contact">Contact</a>
+    </nav>
 
-    <section id="Research-Interests">
-        <h2>Research Interests</h2>
-        <p>Details about your research interests.</p>
-    </section>
+    <main>
+        <section id="Introduction">
+            <h2>Introduction</h2>
+            <p>Brief introduction about yourself.</p>
+        </section>
 
-    <section id="Projects">
-        <h2>Projects</h2>
-        <p>Information about your projects.</p>
-    </section>
+        <section id="Research-Interests">
+            <h2>Research Interests</h2>
+            <p>Details about your research interests.</p>
+        </section>
 
-    <section id="Awards">
-        <h2>Awards</h2>
-        <p>Details of the awards you have received.</p>
-    </section>
-	
-	<section id="Other Activities">
-        <h2>Awards</h2>
-        <p>Details of the awards you have received.</p>
-    </section>
+        <section id="Projects">
+            <h2>Projects</h2>
+            <p>Information about your projects.</p>
+        </section>
+
+        <section id="Awards">
+            <h2>Awards</h2>
+            <p>Details of the awards you have received.</p>
+        </section>
+		
+        <section id="Other-Activities">
+            <h2>Other Activities</h2>
+            <p>Information about other activities.</p>
+        </section>
+
+        <section id="Contact">
+            <h2>Contact</h2>
+            <p>Details for contacting you.</p>
+        </section>
+    </main>
 
     <footer>
         <div class="social-media">
-        <a href="https://www.linkedin.com/in/ankita-murmu-3083a99a/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn">
-        </a>
-        <a href="mailto:ankitamurmu009@gmail.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
-        </a>
+            <a href="https://www.linkedin.com/in/ankita-murmu-3083a99a/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn">
+            </a>
+            <a href="mailto:ankitamurmu009@gmail.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
+            </a>
+        </div>
     </footer>
 </body>
 </html>
