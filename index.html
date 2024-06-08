@@ -65,11 +65,16 @@
             margin: 40px 0;
         }
         .social-media {
+            display: flex; /* Use flexbox to remove spaces between icons */
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px; /* Add margin between icons */
         }
         .social-media img {
             width: 40px;
-            margin: 0 10px;
             transition: transform 0.3s;
         }
         .social-media img:hover {
@@ -89,7 +94,6 @@
         <a href="#Projects" class="tab-link" onclick="showTab(event, 'Projects')">Projects</a>
         <a href="#Awards" class="tab-link" onclick="showTab(event, 'Awards')">Awards</a>
         <a href="#Other-Activities" class="tab-link" onclick="showTab(event, 'Other-Activities')">Other Activities</a>
-        <a href="#Contact" class="tab-link" onclick="showTab(event, 'Contact')">Contact</a>
     </nav>
 
     <main>
@@ -112,7 +116,7 @@
             <h2>Awards</h2>
             <p>This is the awards section. List your awards here.</p>
         </section>
-
+		
         <section id="Other-Activities" class="tab-content">
             <h2>Other Activities</h2>
             <p>This is the other activities section. Include information about other activities here.</p>
@@ -122,10 +126,10 @@
 
     <footer>
         <div class="social-media">
-            <a href="https://www.linkedin.com/in/ankita-murmu-3083a99a/" target="blank">
+            <a href="https://www.linkedin.com/in/ankita-murmu-3083a99a/" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn">
             </a>
-            <a href="mailto:ankitamurmu009@gmail.com" target="blank">
+            <a href="mailto:ankitamurmu009@gmail.com" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
             </a>
         </div>
